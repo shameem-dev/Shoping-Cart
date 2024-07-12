@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <title>{{title}}</title>
+        
+        
+
+    </head>
+    <body>
+        {{#if admin}}
+        {{>admin-header}}
+
+        {{else}}
+        {{>user-header}}
+        {{/if}}
+        
+        {{!-- {{{body}}} --}}
+
+        
+    </body>
+</html>

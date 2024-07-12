@@ -1,0 +1,48 @@
+<section class="m-10 ">
+    <div class="text-right mr-20">
+        <a href="/admin/add-product" class="bg-green-700 text-white px-4 py-2 rounded-lg">Add product</a>
+    </div>
+
+<div class="relative overflow-x-auto mt-6">
+    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+                <th scope="col" class="px-6 py-3">
+                    Product name
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Description    
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Category
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Image
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            {{#each products}}
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                <td class="px-6 py-4">
+                    {{this.name}}
+                </td>
+                <td class="px-6 py-4">
+                    {{this.category}}
+                </td>
+
+                <td class="px-6 py-4">
+                   {{this.description}}
+                </td>
+                <td class="px-6 py-4">
+                    <img src="{{this.image}}" class="w-12 h-12" alt="">
+                </td>
+            </tr>
+            {{/each}}
+            
+        </tbody>
+    </table>
+</div>
+
+</section>

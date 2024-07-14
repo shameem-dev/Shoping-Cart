@@ -25,10 +25,16 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-db.connect((err)=>{
-  if(err) console.log('Connection Error'+ err);
-  else console.log('Database Connected');
-})
+db.connect((err) => {
+  if (err) {
+    console.log("Connection Error"+err);
+    
+  } else {
+    console.log("Database Connected to port 27017");
+
+    // Continue setting up Express and routes here
+  }
+});
 
 
 app.use('/', userRouter);
